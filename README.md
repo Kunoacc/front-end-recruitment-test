@@ -14,12 +14,13 @@ Follow [installation instructions](https://github.com/google/web-starter-kit/blo
 
 ---
 
+## Completed Tasks
 ### Task 1
-Add [this repo](https://github.com/SnowdogApps/front-end-recruitment-test-submodule) as submodule at `/submodule` folder, then run gulp task `submodule` to add symlink.
+Added [this repo](https://github.com/Kunoacc/front-end-recruitment-test-submodule) as submodule at `/submodule` folder, then ran gulp task `submodule` to add symlink.
 
-[Here](http://localhost:3000/submodule.html) you should see a beautiful page with slices of fried bacon.
+[Here](http://localhost:3000/submodule.html) displayed a beautiful page with slices of fried bacon.
 
-Add JS to clone bacon image and attach this action to **Yeah, I want more bacon!** button.
+Added JS to clone bacon image and attach this action to **Yeah, I want more bacon!** button.
 
 ### Task 2
 Add tab **Checkout** that reflects design from `/projects/checkout.png`.
