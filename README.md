@@ -15,6 +15,7 @@ Follow [installation instructions](https://github.com/google/web-starter-kit/blo
 ---
 
 ## Completed Tasks
+Below are a list of the tasks that were completed.
 ### Task 1
 Added [this repo](https://github.com/Kunoacc/front-end-recruitment-test-submodule) as submodule at `/submodule` folder, then ran gulp task `submodule` to add symlink.
 
@@ -23,9 +24,9 @@ Added [this repo](https://github.com/Kunoacc/front-end-recruitment-test-submodul
 Added JS to clone bacon image and attach this action to **Yeah, I want more bacon!** button.
 
 ### Task 2
-Add tab **Checkout** that reflects design from `/projects/checkout.png`.
+Added tab **Checkout** that reflects design from `/projects/checkout.png`.
 
-Use SCSS to write your styles.
+Used SCSS to write your styles.
 
 ### Task 3
 Add simple JS validation to checkout form created earlier and show success/error message on form submit.

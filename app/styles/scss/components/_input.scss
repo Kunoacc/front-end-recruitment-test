@@ -1,0 +1,81 @@
+.input{
+  padding: .5rem 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  border-bottom: solid 2px $not-so-dark-grey;
+  border-radius: 4px;
+  background-color: $white;
+  font-size: $font-sm;
+
+  & label, input, select {
+    transition: all 0.2s ease;
+  }
+
+  & input, select {
+    border: none;
+    font-size: $font-lg;
+    font-weight: 400;
+
+    &:focus{
+      outline: none;
+
+      &::-webkit-input-placeholder{
+        opacity: 1;
+      }
+    }
+
+    &::placeholder {
+      color: $dark-grey;
+    }
+
+    &:placeholder-shown + label {
+      cursor: text;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 70%;
+      transform-origin: left bottom;
+      transform: translate(0, 1.125rem) scale(1.5);
+    }
+
+    &:not(:placeholder-shown) + label, &:focus + label {
+      transform: translate(0, 0) scale(1);
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+
+  & label {
+    text-transform: capitalize;
+    color: $black;
+  }
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+.input--image{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 2px $not-so-dark-grey;
+  border-radius: 4px;
+  background-color: $white;
+  padding-right: 1rem;
+
+  & img{
+    height: 1rem;
+  }
+
+  & .input{
+    border-bottom: transparent;
+    border-radius: 4px;
+    background-color: transparent;
+    flex-grow: 1;
+    padding-right: 2rem;
+  }
+}
