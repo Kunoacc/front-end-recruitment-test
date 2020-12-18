@@ -29,4 +29,4 @@ Added tab **Checkout** that reflects design from `/projects/checkout.png`.
 Used SCSS to write your styles.
 
 ### Task 3
-Add simple JS validation to checkout form created earlier and show success/error message on form submit.
+Added simple JS validation to checkout form created earlier and show success/error message on form submit.
