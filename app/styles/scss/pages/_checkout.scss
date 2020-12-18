@@ -1,0 +1,163 @@
+.bg-grey{
+  background-color: $grey !important;
+}
+
+.checkout {
+  background-color: $grey !important;
+  display: flex !important;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  padding: 0 2rem;
+  flex-direction: column-reverse;
+
+  @include breakpoint($tablet-landscape-up){
+    grid-template-columns: 3fr 1fr;
+    column-gap: 2rem;
+    display: grid !important;
+  }
+}
+
+.field-groups{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+  padding: 1rem;
+
+  @include breakpoint($tablet-landscape-up){
+    row-gap: 4rem;
+    padding: 2rem;
+  }
+}
+
+.field-group{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 1rem;
+  margin-left: -1rem;
+
+  @include breakpoint($tablet-landscape-up){
+    margin-left: -2rem;
+    row-gap: 2rem;
+  }
+
+  &__title {
+    font-weight: bold;
+    color: $black;
+    font-size: $font-lg;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    &__position {
+      color: $white;
+      border-radius: 9999999px;
+      background-color: $black;
+      padding: 1px 9px;
+      margin-right: 1rem;
+      font-size: $font-sm;
+    }
+  }
+}
+
+.fields{
+  display: grid;
+  padding-left: 1rem;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  row-gap: 2rem;
+  grid-auto-rows: 1fr;
+
+  @include breakpoint($tablet-landscape-up){
+    grid-template-columns: 1fr 1fr;
+    padding-left: 2rem;
+  }
+
+  & div:nth-child(3n){
+    @include breakpoint($tablet-landscape-up){
+      grid-column: auto / span 2;
+    }
+  }
+
+  &--reverse {
+    & div:nth-child(3n + 1) {
+      @include breakpoint($tablet-landscape-up) {
+        grid-column: auto / span 2;
+      }
+    }
+
+    & div:nth-child(3n) {
+      @include breakpoint($tablet-landscape-up) {
+        grid-column: auto / span 1;
+      }
+    }
+  }
+}
+
+.cart {
+  margin: 1rem 1rem 2rem 1rem;
+  padding: .5rem;
+  border-bottom: solid 2px $not-so-dark-grey;
+  border-radius: 4px;
+  background-color: $white;
+  align-self: stretch;
+  color: $black;
+
+  @include breakpoint($tablet-landscape-up){
+    margin-top: 6rem;
+    margin-bottom: 0;
+    align-self: flex-start;
+  }
+
+  &-body{
+    border: dashed 2px $not-so-dark-grey;
+    padding: 1rem;
+
+    &__title {
+      text-align: left;
+      font-size: $font-base;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    &__items {
+      padding: 1rem 0px;
+      display: grid;
+      border-bottom: dashed 2px $not-so-dark-grey;
+      row-gap: .25rem;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-footer{
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & p{
+      line-height: initial;
+      margin: 0;
+    }
+
+    &__price {
+      font-size: 2rem;
+      line-height: 100%;
+      margin: 0;
+    }
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $font-base;
+
+    & p{
+      margin: 0;
+    }
+  }
+}
