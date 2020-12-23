@@ -7,6 +7,7 @@
   border-radius: 4px;
   background-color: $white;
   font-size: $font-sm;
+  position: relative;
 
   & label, input, select {
     transition: all 0.2s ease;
@@ -50,6 +51,24 @@
     text-transform: capitalize;
     color: $black;
   }
+
+  & span{
+    display: none;
+    position: absolute;
+    bottom: -25px;
+    font-weight: bold;
+  }
+
+  &--error{
+    border-width: 1px 1px 2px 1px;
+    border-color: $error;
+    border-style: solid;
+
+    & span {
+      color: $error;
+      display: block;
+    }
+  }
 }
 
 ::-webkit-input-placeholder {
@@ -58,24 +77,25 @@
 }
 
 .input--image{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: solid 2px $not-so-dark-grey;
-  border-radius: 4px;
-  background-color: $white;
-  padding-right: 1rem;
-
-  & img{
-    height: 1rem;
-  }
-
-  & .input{
-    border-bottom: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 2px $not-so-dark-grey;
     border-radius: 4px;
-    background-color: transparent;
-    flex-grow: 1;
-    padding-right: 2rem;
+    background-color: $white;
+    padding-right: 1rem;
+    position: relative;
+
+    & img{
+      height: 1rem;
+    }
+
+    & .input{
+      border-bottom: transparent;
+      border-radius: 4px;
+      background-color: transparent;
+      flex-grow: 1;
+      padding-right: 2rem;
+    }
   }
-}
